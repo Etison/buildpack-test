@@ -1,2 +1,5 @@
 #!/bin/sh
 echo "Running bin/prepare from inside the app!!!!!!!!!!!!"
+rm -rf public/assets
+#cp -a public/landers/. public/assets/
+RAILS_ENV=production bundle exec rake assets:precompile
